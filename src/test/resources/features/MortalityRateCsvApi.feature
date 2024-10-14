@@ -2,7 +2,7 @@ Feature: Mortality Rates CSV API
 
   Scenario: Post empty file
     When I send empty file for the year 2016
-    Then I get a "BAD_REQUEST" status response
+    Then I get a "UNSUPPORTED_MEDIA_TYPE" status response
 
   Scenario Outline: Post csv mortality rates Bad Request
     When I send "<file>.csv" for the year <year>
