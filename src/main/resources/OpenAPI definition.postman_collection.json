@@ -8,7 +8,7 @@
 	},
 	"item": [
 		{
-			"name": "MortalityRates",
+			"name": "mortalityrates",
 			"item": [
 				{
 					"name": "years",
@@ -47,12 +47,12 @@
 															}
 														},
 														"url": {
-															"raw": "{{baseUrl}}/MortalityRates/years/:yearOfRate/countries/:countryCode",
+															"raw": "{{baseUrl}}/mortalityrates/years/:yearOfRate/countries/:countryCode",
 															"host": [
 																"{{baseUrl}}"
 															],
 															"path": [
-																"MortalityRates",
+																"mortalityrates",
 																"years",
 																":yearOfRate",
 																"countries",
@@ -98,14 +98,14 @@
 																	}
 																},
 																"url": {
-																	"raw": "http://localhost:8080/MortalityRates/years/:yearOfRate/countries/:countryCode",
+																	"raw": "http://localhost:8080/mortalityrates/years/:yearOfRate/countries/:countryCode",
 																	"protocol": "http",
 																	"host": [
 																		"localhost"
 																	],
 																	"port": "8080",
 																	"path": [
-																		"MortalityRates",
+																		"mortalityrates",
 																		"years",
 																		":yearOfRate",
 																		"countries",
@@ -158,12 +158,12 @@
 																	}
 																},
 																"url": {
-																	"raw": "{{baseUrl}}/MortalityRates/years/:yearOfRate/countries/:countryCode",
+																	"raw": "{{baseUrl}}/mortalityrates/years/:yearOfRate/countries/:countryCode",
 																	"host": [
 																		"{{baseUrl}}"
 																	],
 																	"path": [
-																		"MortalityRates",
+																		"mortalityrates",
 																		"years",
 																		":yearOfRate",
 																		"countries",
@@ -206,12 +206,12 @@
 													}
 												],
 												"url": {
-													"raw": "{{baseUrl}}/MortalityRates/years/:yearOfRate/countries",
+													"raw": "{{baseUrl}}/mortalityrates/years/:yearOfRate/countries",
 													"host": [
 														"{{baseUrl}}"
 													],
 													"path": [
-														"MortalityRates",
+														"mortalityrates",
 														"years",
 														":yearOfRate",
 														"countries"
@@ -237,14 +237,14 @@
 															}
 														],
 														"url": {
-															"raw": "http://localhost:8080/MortalityRates/years/:yearOfRate/countries",
+															"raw": "http://localhost:8080/mortalityrates/years/:yearOfRate/countries",
 															"protocol": "http",
 															"host": [
 																"localhost"
 															],
 															"port": "8080",
 															"path": [
-																"MortalityRates",
+																"mortalityrates",
 																"years",
 																":yearOfRate",
 																"countries"
@@ -279,12 +279,12 @@
 															}
 														],
 														"url": {
-															"raw": "{{baseUrl}}/MortalityRates/years/:yearOfRate/countries",
+															"raw": "{{baseUrl}}/mortalityrates/years/:yearOfRate/countries",
 															"host": [
 																"{{baseUrl}}"
 															],
 															"path": [
-																"MortalityRates",
+																"mortalityrates",
 																"years",
 																":yearOfRate",
 																"countries"
@@ -336,12 +336,12 @@
 													]
 												},
 												"url": {
-													"raw": "{{baseUrl}}/MortalityRates/years/:yearOfRate/countries",
+													"raw": "{{baseUrl}}/mortalityrates/years/:yearOfRate/countries",
 													"host": [
 														"{{baseUrl}}"
 													],
 													"path": [
-														"MortalityRates",
+														"mortalityrates",
 														"years",
 														":yearOfRate",
 														"countries"
@@ -382,14 +382,14 @@
 															]
 														},
 														"url": {
-															"raw": "http://localhost:8080/MortalityRates/years/:yearOfRate/countries",
+															"raw": "http://localhost:8080/mortalityrates/years/:yearOfRate/countries",
 															"protocol": "http",
 															"host": [
 																"localhost"
 															],
 															"port": "8080",
 															"path": [
-																"MortalityRates",
+																"mortalityrates",
 																"years",
 																":yearOfRate",
 																"countries"
@@ -439,12 +439,12 @@
 															]
 														},
 														"url": {
-															"raw": "{{baseUrl}}/MortalityRates/years/:yearOfRate/countries",
+															"raw": "{{baseUrl}}/mortalityrates/years/:yearOfRate/countries",
 															"host": [
 																"{{baseUrl}}"
 															],
 															"path": [
-																"MortalityRates",
+																"mortalityrates",
 																"years",
 																":yearOfRate",
 																"countries"
@@ -494,12 +494,12 @@
 															]
 														},
 														"url": {
-															"raw": "{{baseUrl}}/MortalityRates/years/:yearOfRate/countries",
+															"raw": "{{baseUrl}}/mortalityrates/years/:yearOfRate/countries",
 															"host": [
 																"{{baseUrl}}"
 															],
 															"path": [
-																"MortalityRates",
+																"mortalityrates",
 																"years",
 																":yearOfRate",
 																"countries"

@@ -24,7 +24,7 @@ import static org.apache.tomcat.util.http.fileupload.FileUploadBase.MULTIPART_FO
 
 @RestController
 @Tag(name = "Mortality", description = "Operations related to mortality rates")
-@RequestMapping(value = "MortalityRates/years/{yearOfRate}/countries")
+@RequestMapping(value = "mortalityrates/years/{yearOfRate}/countries")
 @Validated
 public class MortalityController {
     private final MortalityRateMapper mortalityMapper;

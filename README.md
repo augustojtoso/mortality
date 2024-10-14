@@ -35,13 +35,13 @@ To test the API endpoints, you can use the provided Postman collection: [`OpenAP
 ### API Endpoints
 
 
-- **GET /MortalityRates/years/{yearOfRate}/countries**: Retrieve mortality rates for a specific year.
-- **POST /MortalityRates/years/{yearOfRate}/countries**: Upload a CSV file with mortality rates for a specific year.
-- **POST /MortalityRates/years/{yearOfRate}/countries/{countryCode}**: Update mortality rates for a specific country.
+- **GET /mortalityrates/years/{yearOfRate}/countries**: Retrieve mortality rates for a specific year.
+- **POST /mortalityrates/years/{yearOfRate}/countries**: Upload a CSV file with mortality rates for a specific year.
+- **POST /mortalityrates/years/{yearOfRate}/countries/{countryCode}**: Update mortality rates for a specific country.
 
 ### Example Requests
 
 #### Retrieve Mortality Rates
 
 ```sh
-curl -X GET "http://localhost:8080/MortalityRates/years/2016/countries"
+curl -X GET "http://localhost:8080/mortalityrates/years/2016/countries"

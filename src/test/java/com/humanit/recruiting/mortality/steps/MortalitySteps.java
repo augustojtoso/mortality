@@ -45,7 +45,7 @@ public class MortalitySteps {
     @Autowired
     private MortalityRateRepository mortalityRateRepository;
 
-    final String BASE_URL = "/MortalityRates/years/";
+    final String BASE_URL = "/mortalityrates/years/";
     final String COUNTRIES = "/countries";
 
 
@@ -90,7 +90,7 @@ public class MortalitySteps {
     }
 
     @When("I request the mortality rates for the year {int}")
-    public void iRequestTheMortalityRatesForTheYear(int year) {
+    public void iRequestThemortalityratesForTheYear(int year) {
         callApi(countriesFromYearsUrl(year), HttpMethod.GET, null);
 
     }
@@ -137,7 +137,7 @@ public class MortalitySteps {
     }
 
     @Given("I have the registered mortality rates:")
-    public void iHaveTheRegisteredMortalityRatesForTheYear(List<MortalityRate> dataset) {
+    public void iHaveTheRegisteredmortalityratesForTheYear(List<MortalityRate> dataset) {
         mortalityRateRepository.saveAll(dataset);
     }
 
