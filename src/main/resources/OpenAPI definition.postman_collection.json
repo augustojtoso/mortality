@@ -1,0 +1,537 @@
+{
+	"info": {
+		"_postman_id": "4d66d933-33cc-4995-997f-7510c171a664",
+		"name": "OpenAPI definition",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22517707",
+		"_collection_link": "https://humanit-7826.postman.co/workspace/5dfde508-8b59-45ec-ab53-d371cba4bcc5/collection/22517707-4d66d933-33cc-4995-997f-7510c171a664?action=share&source=collection_link&creator=22517707"
+	},
+	"item": [
+		{
+			"name": "MortalityRates",
+			"item": [
+				{
+					"name": "years",
+					"item": [
+						{
+							"name": "{yearOfRate}",
+							"item": [
+								{
+									"name": "countries",
+									"item": [
+										{
+											"name": "{countryCode}",
+											"item": [
+												{
+													"name": "update Country",
+													"request": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															},
+															{
+																"key": "Accept",
+																"value": "application/hal+json"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"id\": {\n    \"yearOfRate\": \"<integer>\",\n    \"countryCode\": \"<string>\"\n  },\n  \"maleRate\": \"<number>\",\n  \"femaleRate\": \"<number>\",\n  \"malePopulation\": \"<integer>\",\n  \"femalePopulation\": \"<integer>\"\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/MortalityRates/years/:yearOfRate/countries/:countryCode",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"MortalityRates",
+																"years",
+																":yearOfRate",
+																"countries",
+																":countryCode"
+															],
+															"variable": [
+																{
+																	"key": "yearOfRate",
+																	"value": "<integer>",
+																	"description": "(Required) "
+																},
+																{
+																	"key": "countryCode",
+																	"value": "<string>",
+																	"description": "(Required) "
+																}
+															]
+														}
+													},
+													"response": [
+														{
+															"name": "Created",
+															"originalRequest": {
+																"method": "POST",
+																"header": [
+																	{
+																		"key": "Content-Type",
+																		"value": "application/json"
+																	},
+																	{
+																		"key": "Accept",
+																		"value": "application/hal+json"
+																	}
+																],
+																"body": {
+																	"mode": "raw",
+																	"raw": "{\n  \"id\": {\n    \"yearOfRate\": \"<integer>\",\n    \"countryCode\": \"<string>\"\n  },\n  \"maleRate\": \"<number>\",\n  \"femaleRate\": \"<number>\",\n  \"malePopulation\": \"<integer>\",\n  \"femalePopulation\": \"<integer>\"\n}",
+																	"options": {
+																		"raw": {
+																			"headerFamily": "json",
+																			"language": "json"
+																		}
+																	}
+																},
+																"url": {
+																	"raw": "http://localhost:8080/MortalityRates/years/:yearOfRate/countries/:countryCode",
+																	"protocol": "http",
+																	"host": [
+																		"localhost"
+																	],
+																	"port": "8080",
+																	"path": [
+																		"MortalityRates",
+																		"years",
+																		":yearOfRate",
+																		"countries",
+																		":countryCode"
+																	],
+																	"variable": [
+																		{
+																			"key": "yearOfRate"
+																		},
+																		{
+																			"key": "countryCode"
+																		}
+																	]
+																}
+															},
+															"status": "Created",
+															"code": 201,
+															"_postman_previewlanguage": "json",
+															"header": [
+																{
+																	"key": "Content-Type",
+																	"value": "application/hal+json"
+																}
+															],
+															"cookie": [],
+															"body": "{\n  \"yearOfRate\": \"<integer>\",\n  \"mortalityRates\": {\n    \"ad_26\": {\n      \"id\": {\n        \"yearOfRate\": \"<integer>\",\n        \"countryCode\": \"<string>\"\n      },\n      \"maleRate\": \"<number>\",\n      \"femaleRate\": \"<number>\",\n      \"malePopulation\": \"<integer>\",\n      \"femalePopulation\": \"<integer>\"\n    },\n    \"idf\": {\n      \"id\": {\n        \"yearOfRate\": \"<integer>\",\n        \"countryCode\": \"<string>\"\n      },\n      \"maleRate\": \"<number>\",\n      \"femaleRate\": \"<number>\",\n      \"malePopulation\": \"<integer>\",\n      \"femalePopulation\": \"<integer>\"\n    }\n  }\n}"
+														},
+														{
+															"name": "Invalid country code",
+															"originalRequest": {
+																"method": "POST",
+																"header": [
+																	{
+																		"key": "Content-Type",
+																		"value": "application/json"
+																	},
+																	{
+																		"key": "Accept",
+																		"value": "application/hal+json"
+																	}
+																],
+																"body": {
+																	"mode": "raw",
+																	"raw": "{\n  \"id\": {\n    \"yearOfRate\": \"<integer>\",\n    \"countryCode\": \"<string>\"\n  },\n  \"maleRate\": \"<number>\",\n  \"femaleRate\": \"<number>\",\n  \"malePopulation\": \"<integer>\",\n  \"femalePopulation\": \"<integer>\"\n}",
+																	"options": {
+																		"raw": {
+																			"headerFamily": "json",
+																			"language": "json"
+																		}
+																	}
+																},
+																"url": {
+																	"raw": "{{baseUrl}}/MortalityRates/years/:yearOfRate/countries/:countryCode",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"MortalityRates",
+																		"years",
+																		":yearOfRate",
+																		"countries",
+																		":countryCode"
+																	],
+																	"variable": [
+																		{
+																			"key": "yearOfRate"
+																		},
+																		{
+																			"key": "countryCode"
+																		}
+																	]
+																}
+															},
+															"status": "Bad Request",
+															"code": 400,
+															"_postman_previewlanguage": "json",
+															"header": [
+																{
+																	"key": "Content-Type",
+																	"value": "application/hal+json"
+																}
+															],
+															"cookie": [],
+															"body": "{\n  \"yearOfRate\": \"<integer>\",\n  \"mortalityRates\": {\n    \"ad_26\": {\n      \"id\": {\n        \"yearOfRate\": \"<integer>\",\n        \"countryCode\": \"<string>\"\n      },\n      \"maleRate\": \"<number>\",\n      \"femaleRate\": \"<number>\",\n      \"malePopulation\": \"<integer>\",\n      \"femalePopulation\": \"<integer>\"\n    },\n    \"idf\": {\n      \"id\": {\n        \"yearOfRate\": \"<integer>\",\n        \"countryCode\": \"<string>\"\n      },\n      \"maleRate\": \"<number>\",\n      \"femaleRate\": \"<number>\",\n      \"malePopulation\": \"<integer>\",\n      \"femalePopulation\": \"<integer>\"\n    }\n  }\n}"
+														}
+													]
+												}
+											]
+										},
+										{
+											"name": "get By Year",
+											"request": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/hal+json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/MortalityRates/years/:yearOfRate/countries",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"MortalityRates",
+														"years",
+														":yearOfRate",
+														"countries"
+													],
+													"variable": [
+														{
+															"key": "yearOfRate",
+															"value": "<integer>",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "Invalid year format",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/hal+json"
+															}
+														],
+														"url": {
+															"raw": "http://localhost:8080/MortalityRates/years/:yearOfRate/countries",
+															"protocol": "http",
+															"host": [
+																"localhost"
+															],
+															"port": "8080",
+															"path": [
+																"MortalityRates",
+																"years",
+																":yearOfRate",
+																"countries"
+															],
+															"variable": [
+																{
+																	"key": "yearOfRate"
+																}
+															]
+														}
+													},
+													"status": "Bad Request",
+													"code": 400,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/hal+json"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"yearOfRate\": \"<integer>\",\n  \"mortalityRates\": {\n    \"ad_26\": {\n      \"id\": {\n        \"yearOfRate\": \"<integer>\",\n        \"countryCode\": \"<string>\"\n      },\n      \"maleRate\": \"<number>\",\n      \"femaleRate\": \"<number>\",\n      \"malePopulation\": \"<integer>\",\n      \"femalePopulation\": \"<integer>\"\n    },\n    \"idf\": {\n      \"id\": {\n        \"yearOfRate\": \"<integer>\",\n        \"countryCode\": \"<string>\"\n      },\n      \"maleRate\": \"<number>\",\n      \"femaleRate\": \"<number>\",\n      \"malePopulation\": \"<integer>\",\n      \"femalePopulation\": \"<integer>\"\n    }\n  }\n}"
+												},
+												{
+													"name": "Yearly mortality rate not found",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/hal+json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/MortalityRates/years/:yearOfRate/countries",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"MortalityRates",
+																"years",
+																":yearOfRate",
+																"countries"
+															],
+															"variable": [
+																{
+																	"key": "yearOfRate"
+																}
+															]
+														}
+													},
+													"status": "Not Found",
+													"code": 404,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/hal+json"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"yearOfRate\": \"<integer>\",\n  \"mortalityRates\": {\n    \"ad_26\": {\n      \"id\": {\n        \"yearOfRate\": \"<integer>\",\n        \"countryCode\": \"<string>\"\n      },\n      \"maleRate\": \"<number>\",\n      \"femaleRate\": \"<number>\",\n      \"malePopulation\": \"<integer>\",\n      \"femalePopulation\": \"<integer>\"\n    },\n    \"idf\": {\n      \"id\": {\n        \"yearOfRate\": \"<integer>\",\n        \"countryCode\": \"<string>\"\n      },\n      \"maleRate\": \"<number>\",\n      \"femaleRate\": \"<number>\",\n      \"malePopulation\": \"<integer>\",\n      \"femalePopulation\": \"<integer>\"\n    }\n  }\n}"
+												}
+											]
+										},
+										{
+											"name": "update Year",
+											"request": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "multipart/form-data"
+													},
+													{
+														"key": "Accept",
+														"value": "application/hal+json"
+													}
+												],
+												"body": {
+													"mode": "formdata",
+													"formdata": [
+														{
+															"key": "csv",
+															"description": "(Required) ",
+															"type": "file",
+															"src": []
+														}
+													]
+												},
+												"url": {
+													"raw": "{{baseUrl}}/MortalityRates/years/:yearOfRate/countries",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"MortalityRates",
+														"years",
+														":yearOfRate",
+														"countries"
+													],
+													"variable": [
+														{
+															"key": "yearOfRate",
+															"value": "<integer>",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "Created",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "multipart/form-data"
+															},
+															{
+																"key": "Accept",
+																"value": "application/hal+json"
+															}
+														],
+														"body": {
+															"mode": "formdata",
+															"formdata": [
+																{
+																	"key": "csv",
+																	"description": "(Required) ",
+																	"type": "file",
+																	"src": []
+																}
+															]
+														},
+														"url": {
+															"raw": "http://localhost:8080/MortalityRates/years/:yearOfRate/countries",
+															"protocol": "http",
+															"host": [
+																"localhost"
+															],
+															"port": "8080",
+															"path": [
+																"MortalityRates",
+																"years",
+																":yearOfRate",
+																"countries"
+															],
+															"variable": [
+																{
+																	"key": "yearOfRate"
+																}
+															]
+														}
+													},
+													"status": "Created",
+													"code": 201,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/hal+json"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"yearOfRate\": \"<integer>\",\n  \"mortalityRates\": {\n    \"ad_26\": {\n      \"id\": {\n        \"yearOfRate\": \"<integer>\",\n        \"countryCode\": \"<string>\"\n      },\n      \"maleRate\": \"<number>\",\n      \"femaleRate\": \"<number>\",\n      \"malePopulation\": \"<integer>\",\n      \"femalePopulation\": \"<integer>\"\n    },\n    \"idf\": {\n      \"id\": {\n        \"yearOfRate\": \"<integer>\",\n        \"countryCode\": \"<string>\"\n      },\n      \"maleRate\": \"<number>\",\n      \"femaleRate\": \"<number>\",\n      \"malePopulation\": \"<integer>\",\n      \"femalePopulation\": \"<integer>\"\n    }\n  }\n}"
+												},
+												{
+													"name": "Invalid country code",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "multipart/form-data"
+															},
+															{
+																"key": "Accept",
+																"value": "application/hal+json"
+															}
+														],
+														"body": {
+															"mode": "formdata",
+															"formdata": [
+																{
+																	"key": "csv",
+																	"description": "(Required) ",
+																	"type": "file",
+																	"src": []
+																}
+															]
+														},
+														"url": {
+															"raw": "{{baseUrl}}/MortalityRates/years/:yearOfRate/countries",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"MortalityRates",
+																"years",
+																":yearOfRate",
+																"countries"
+															],
+															"variable": [
+																{
+																	"key": "yearOfRate"
+																}
+															]
+														}
+													},
+													"status": "Bad Request",
+													"code": 400,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/hal+json"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"yearOfRate\": \"<integer>\",\n  \"mortalityRates\": {\n    \"ad_26\": {\n      \"id\": {\n        \"yearOfRate\": \"<integer>\",\n        \"countryCode\": \"<string>\"\n      },\n      \"maleRate\": \"<number>\",\n      \"femaleRate\": \"<number>\",\n      \"malePopulation\": \"<integer>\",\n      \"femalePopulation\": \"<integer>\"\n    },\n    \"idf\": {\n      \"id\": {\n        \"yearOfRate\": \"<integer>\",\n        \"countryCode\": \"<string>\"\n      },\n      \"maleRate\": \"<number>\",\n      \"femaleRate\": \"<number>\",\n      \"malePopulation\": \"<integer>\",\n      \"femalePopulation\": \"<integer>\"\n    }\n  }\n}"
+												},
+												{
+													"name": "Yearly mortality rate not found",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "multipart/form-data"
+															},
+															{
+																"key": "Accept",
+																"value": "application/hal+json"
+															}
+														],
+														"body": {
+															"mode": "formdata",
+															"formdata": [
+																{
+																	"key": "csv",
+																	"description": "(Required) ",
+																	"type": "file",
+																	"src": []
+																}
+															]
+														},
+														"url": {
+															"raw": "{{baseUrl}}/MortalityRates/years/:yearOfRate/countries",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"MortalityRates",
+																"years",
+																":yearOfRate",
+																"countries"
+															],
+															"variable": [
+																{
+																	"key": "yearOfRate"
+																}
+															]
+														}
+													},
+													"status": "Not Found",
+													"code": 404,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/hal+json"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"yearOfRate\": \"<integer>\",\n  \"mortalityRates\": {\n    \"ad_26\": {\n      \"id\": {\n        \"yearOfRate\": \"<integer>\",\n        \"countryCode\": \"<string>\"\n      },\n      \"maleRate\": \"<number>\",\n      \"femaleRate\": \"<number>\",\n      \"malePopulation\": \"<integer>\",\n      \"femalePopulation\": \"<integer>\"\n    },\n    \"idf\": {\n      \"id\": {\n        \"yearOfRate\": \"<integer>\",\n        \"countryCode\": \"<string>\"\n      },\n      \"maleRate\": \"<number>\",\n      \"femaleRate\": \"<number>\",\n      \"malePopulation\": \"<integer>\",\n      \"femalePopulation\": \"<integer>\"\n    }\n  }\n}"
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}
