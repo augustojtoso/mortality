@@ -52,12 +52,12 @@ public class MortalityRateServiceImpl implements MortalityRateService {
 
     @Override
     public void update(Integer yearOfRate, MultipartFile file)  {
-        List<MortalityRate> mortalityRateList = fileTomortalityrates(yearOfRate, file);
+        List<MortalityRate> mortalityRateList = fileToMortalityRates(yearOfRate, file);
         mortalityRateRepository.deleteById_YearOfRate(yearOfRate);
         mortalityRateRepository.saveAll(mortalityRateList);
     }
 
-    private List<MortalityRate> fileTomortalityrates(Integer yearOfRate, MultipartFile file) {
+    private List<MortalityRate> fileToMortalityRates(Integer yearOfRate, MultipartFile file) {
         List<MortalityRate> mortalityRateList = new ArrayList<>(Collections.emptyList());
         try (BufferedReader reader = new BufferedReader(new InputStreamReader(file.getInputStream()))) {
             String line;

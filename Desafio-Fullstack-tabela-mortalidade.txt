@@ -42,7 +42,9 @@ A solução deve ser baseada em Java, Spring, JPA/Hibernate
 === PARTE 2 : FRONTEND ===
 
 
-Pretende-se ainda uma aplicação web onde é apresentada em modo read-only a tabela de mortalidade de um dado ano. O ano pode ser alterado numa dropdown e a tabela deve refletir os valores corretos desse ano.
-Deve existir um botão “edit” à frente de cada entrada da tabela que permite alterar essa entrada. Ao clicar nesse botão, essa entrada fica em modo de edição e aparecem dois novos botões “confirm” e “cancel”
+Pretende-se ainda uma aplicação web onde é apresentada em modo read-only a tabela de mortalidade de um dado ano.
+O ano pode ser alterado numa dropdown e a tabela deve refletir os valores corretos desse ano.
+Deve existir um botão “edit” à frente de cada entrada da tabela que permite alterar essa entrada. Ao clicar nesse botão,
+essa entrada fica em modo de edição e aparecem dois novos botões “confirm” e “cancel”
 
 Podes usar third-party libraries para te ajudar na estrutura e styling da APP, como por exemplo patternfly-react, material-ui, etc.
