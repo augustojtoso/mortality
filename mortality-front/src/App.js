@@ -1,5 +1,5 @@
 import React from 'react';
-import MortalityTable from './components/MortalityTable';
+import MortalityTable from './components/MortalityTable/MortalityTable';
 
 const App = () => {
   return (

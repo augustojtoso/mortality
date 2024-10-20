@@ -1,41 +1,29 @@
 import React, { useState } from 'react';
 import isoCountries from 'i18n-iso-countries';
-import axios from 'axios';
-import RateInput from './RateInput';
-import ConfirmButton from './ConfirmButton';
+import RateInput from '../common/RateInput';
+import ConfirmButton from '../common/ConfirmButton';
 
-const CountryRow = ({ countryCode, mortalityRate, editCountryCode, editData, handleChange, fetchData, year }) => {
+const CountryRow = ({ countryCode, mortalityRate, onConfirm }) => {
   const [editMode, setEditMode] = useState(false);
-  const [localEditData, setLocalEditData] = useState(mortalityRate);
+  const [newRow, setLocalEditData] = useState({ ...mortalityRate, countryCode });
   const [isValid, setIsValid] = useState(true);
 
   isoCountries.registerLocale(require("i18n-iso-countries/langs/en.json"));
 
-  const getCountryName = (countryCode) => {
-    return isoCountries.getName(countryCode, "en");
-  };
-
-  const handleEdit = () => {
-    setEditMode(true);
-  };
+  const getCountryName = (countryCode) => isoCountries.getName(countryCode, "en");
 
   const handleConfirm = async () => {
-    try {
-      await axios.post(`/mortalityrates/years/${year}/countries/${countryCode}`, localEditData);
-      fetchData(year);
-    } catch (error) {
-      console.error('Error updating data:', error);
-    }
+    onConfirm(newRow)
     setEditMode(false);
   };
 
   const handleCancel = () => {
     setEditMode(false);
-    setLocalEditData(mortalityRate);
+    setLocalEditData({ ...mortalityRate, countryCode });
   };
 
   const handleLocalChange = (e) => {
-    setLocalEditData({ ...localEditData, [e.target.name]: e.target.value });
+    setLocalEditData({ ...newRow, [e.target.name]: e.target.value });
   };
 
   return (
@@ -45,7 +33,7 @@ const CountryRow = ({ countryCode, mortalityRate, editCountryCode, editData, han
         {editMode ? (
           <RateInput
             name="maleRate"
-            value={localEditData.maleRate}
+            value={newRow.maleRate}
             onChange={handleLocalChange}
             setIsValid={setIsValid}
           />
@@ -57,7 +45,7 @@ const CountryRow = ({ countryCode, mortalityRate, editCountryCode, editData, han
         {editMode ? (
           <RateInput
             name="femaleRate"
-            value={localEditData.femaleRate}
+            value={newRow.femaleRate}
             onChange={handleLocalChange}
             setIsValid={setIsValid}
           />
@@ -72,7 +60,7 @@ const CountryRow = ({ countryCode, mortalityRate, editCountryCode, editData, han
             <button className="btn btn-secondary" onClick={handleCancel}>Cancel</button>
           </>
         ) : (
-          <button className="btn btn-primary" onClick={handleEdit}>Edit</button>
+          <button className="btn btn-primary" onClick={() => setEditMode(true)}>Edit</button>
         )}
       </td>
     </tr>
